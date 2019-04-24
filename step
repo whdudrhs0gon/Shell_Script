@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Shell function demo
+
+function step2 {
+	echo "Step2"
+	return
+}
+
+# Main program starts here
+
+echo "step1"
+step2
+echo "step3"
+

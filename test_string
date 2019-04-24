@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# test-string: evaluate the value of string
+
+ANSWER=maybe
+
+if [ -z "$ANSWER" ]; then
+	echo "There is no answer." >%2
+	exit 1
+fi
+
+if [ "$ANSWER" = "yes" ]; then
+	echo "The answer is YES."
+elif [ "$ANSWER" = NO ]; then
+	echo "The answer is NO."
+elif [ "$ANSWER" = maybe ]; then
+	echo "The answer is MAYBE."
+else 
+	echo "The answer is UNKNOWN."
+fi
+
+compare=z
+
+if [ "$ANSWER" \> "$compare" ]; then
+	echo "$ANSWER is larger than $compare."
+elif [ "$ANSWER" \< "$compare" ]; then
+	echo "$ANSWER is smaller than $compare."
+fi
